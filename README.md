@@ -72,3 +72,22 @@ Recreating classic NLP tools to understand the math behind `sklearn`.
 * **Result:** My custom implementation achieved identical Accuracy (**~90-91%**) to the library version, proving correctness of the mathematical logic.
 
 ---
+
+### 5. 👁️ Simpsons Character Classification with CNN & ViT
+**File:** `compvision/cnn.ipynb`
+
+An end-to-end Computer Vision project for classifying Simpsons characters from images. The notebook combines low-level convolution implementation, a custom residual CNN, and transfer learning with a pretrained Vision Transformer.
+
+* **Core Computer Vision:**
+    * Implemented a 2D convolution operation from scratch using `NumPy`, including `stride`, `padding`, and validation against `torch.nn.functional.conv2d`.
+    * Built a custom PyTorch image classification pipeline with train/validation split, preprocessing, augmentation, dataloaders, metric tracking, and confusion matrix analysis.
+* **CNN Baseline:**
+    * Designed a deeper CNN with residual blocks, batch normalization, dropout, adaptive pooling, and `AdamW` regularization.
+    * Added image augmentations such as horizontal flips, small rotations, and color jitter to reduce overfitting.
+* **Transfer Learning:**
+    * Fine-tuned `google/vit-base-patch16-224` by training the classifier head and unfreezing the last encoder block with a lower learning rate.
+
+**📊 Result:**
+* Residual CNN reached about **89% validation accuracy** after tuning architecture, augmentations, and optimizer settings.
+
+---
